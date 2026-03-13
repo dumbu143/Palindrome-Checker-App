@@ -2,8 +2,15 @@ public class Palindrome
 {
     static void main() {
 
-        System.out.println("   Welcome to Palindrome Checker App");
-        System.out.println(" version : 1.0 ");
-        System.out.println(" Systemm initialzed succcesfully ");
+        String text = "madam";
+
+        String reversed = "";
+        for (int i = text.length() - 1; i >= 0; i--) {
+            reversed += text.charAt(i);
+        }
+        boolean isPalindrome = text.equals(reversed);
+
+        System.out.println("Input text: " + text);
+        System.out.println("Is it a Palindrome? : " + isPalindrome);
     }
 }
