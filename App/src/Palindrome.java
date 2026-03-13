@@ -1,16 +1,29 @@
-public class Palindrome
+import java.util.Scanner;
+
+public class Palindromegit a
 {
     static void main() {
 
-        String text = "madam";
+        System.out.println("Palindrome Checker App");
+        System.out.println();
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Input text: ");
+        String text = sc.nextLine();
 
         String reversed = "";
+
         for (int i = text.length() - 1; i >= 0; i--) {
             reversed += text.charAt(i);
         }
-        boolean isPalindrome = text.equals(reversed);
 
-        System.out.println("Input text: " + text);
-        System.out.println("Is it a Palindrome? : " + isPalindrome);
+        System.out.println("Reversed text: " + reversed);
+
+        if (text.equals(reversed)) {
+            System.out.println("Is it a Palindrome? : true");
+        } else {
+            System.out.println("Is it a Palindrome? : false");
+        }
     }
 }
